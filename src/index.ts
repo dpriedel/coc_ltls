@@ -21,7 +21,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
   );
   context.subscriptions.push(services.registLanguageClient(client));
   client.onReady().then(() => {
-    if (!config.get<boolean>('startupMessage', false)) {
+    if (config.get<boolean>('startupMessage', false)) {
       return;
     }
     workspace.showMessage(`ltls: running `);
