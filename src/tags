@@ -1,0 +1,7 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+activate	/home/dpriedel/projects/ltls_coc_extension/coc-ltls/src/index.ts	/^export async function activate(context: ExtensionContext): Promise<void> {$/;"	f	language:TypeScript
+client	/home/dpriedel/projects/ltls_coc_extension/coc-ltls/src/index.ts	/^  const client = new LanguageClient($/;"	C	language:TypeScript	function:activate
+clientOptions	/home/dpriedel/projects/ltls_coc_extension/coc-ltls/src/index.ts	/^  const clientOptions: LanguageClientOptions = {$/;"	C	language:TypeScript	function:activate
+config	/home/dpriedel/projects/ltls_coc_extension/coc-ltls/src/index.ts	/^  const config = workspace.getConfiguration('ltls');$/;"	C	language:TypeScript	function:activate
+isEnable	/home/dpriedel/projects/ltls_coc_extension/coc-ltls/src/index.ts	/^  const isEnable = config.get<boolean>('enabled', true);$/;"	C	language:TypeScript	function:activate
+serverOptions	/home/dpriedel/projects/ltls_coc_extension/coc-ltls/src/index.ts	/^  const serverOptions = {$/;"	C	language:TypeScript	function:activate
