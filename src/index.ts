@@ -8,7 +8,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
   }
 
   const serverOptions = {
-    command: '/home/dpriedel/projects/languagetool_languageserver/__main__.py', // run jls
+    command: '/usr/local/bin/ltls_server.py', // run jls
   };
   const clientOptions: LanguageClientOptions = {
     documentSelector: ['text'], // run ltls on text files

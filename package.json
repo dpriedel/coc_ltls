@@ -1,6 +1,6 @@
 {
     "name": "coc-ltls",
-    "version": "0.1.0-development",
+    "version": "0.1.0",
     "description": "extension to run languagetool as a http server",
     "author": "David P. Riedel <davidp.riedel@gmail.com>",
     "license": "MIT",
