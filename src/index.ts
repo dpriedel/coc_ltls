@@ -7,8 +7,29 @@ export async function activate(context: ExtensionContext): Promise<void> {
     return;
   }
 
+  const language = config.get<string>('language', 'en');
+  const command = config.get<string>('command');
+  const ngrams = config.get<string>('n-grams');
+  const word2vec = config.get<string>('word2vec');
+
+  const cmd: string = command;
+  let args: [string] = [];
+
+  if (language != '') {
+    args = args.concat(['-l', language]);
+  }
+
+  if (ngrams != '') {
+    args = args.concat(['--languageModel', ngrams]);
+  }
+
+  if (word2vec != '') {
+    args = args.concat(['--word2vecModel', word2vec]);
+  }
+
   const serverOptions = {
-    command: '/usr/local/bin/ltls_server.py', // run jls
+    command: cmd, // run jls
+    args: args,
   };
   const clientOptions: LanguageClientOptions = {
     documentSelector: ['text'], // run ltls on text files
@@ -21,7 +42,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
   );
   context.subscriptions.push(services.registLanguageClient(client));
   client.onReady().then(() => {
-    if (config.get<boolean>('startupMessage', false)) {
+    if (!config.get<boolean>('startupMessage', false)) {
       return;
     }
     workspace.showMessage(`ltls: running `);

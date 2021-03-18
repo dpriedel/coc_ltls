@@ -56,6 +56,26 @@
                     "default": true,
                     "description": "Enable/disable languagetool-language-server's message on startup"
                 },
+                "ltls.command": {
+                    "type": "string",
+                    "default": "/usr/local/bin/ltls_server.py",
+                    "description": "Command to start LanguageTool LSP server."
+                },
+                "ltls.n-grams": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Optional path to directory containing n-gram files."
+                },
+                "ltls.word2vec": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Optional path to directory containing word2vec neural net files."
+                },
+                "ltls.language": {
+                    "type": "string",
+                    "default": "en",
+                    "description": "LanguageTool language. Use gerneric for no spell check. Use specific (en-US)to enable spell check."
+                },
                 "ltls.trace.server": {
                     "type": "string",
                     "default": "off",
