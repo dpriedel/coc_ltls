@@ -61,6 +61,16 @@
                     "default": "/usr/local/bin/ltls_server.py",
                     "description": "Command to start LanguageTool LSP server."
                 },
+                "ltls.lt_command": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Command LSP server uses to start LanguageTool."
+                },
+                "ltls.lt_port": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Port number LanguageTool will listen on. Default is 8081."
+                },
                 "ltls.n-grams": {
                     "type": "string",
                     "default": "",

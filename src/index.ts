@@ -9,11 +9,21 @@ export async function activate(context: ExtensionContext): Promise<void> {
 
   const language = config.get<string>('language', 'en');
   const command = config.get<string>('command');
+  const lt_command = config.get<string>('lt_command');
+  const lt_port = config.get<string>('lt_port');
   const ngrams = config.get<string>('n-grams');
   const word2vec = config.get<string>('word2vec');
 
   const cmd: string = command;
   let args: [string] = [];
+
+  if (lt_command != '') {
+    args = args.concat(['-c', lt_command]);
+  }
+
+  if (lt_port != '') {
+    args = args.concat(['-p', lt_port]);
+  }
 
   if (language != '') {
     args = args.concat(['-l', language]);
