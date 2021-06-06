@@ -1,3 +1,6 @@
+NOTE: I do NOT have a installable package created so the instructions below
+are for some future date
+
 # coc-ltls
 
 extension to for languagetool_languageserver
