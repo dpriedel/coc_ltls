@@ -1,5 +1,9 @@
-NOTE: I do NOT have a installable package created so the instructions below
-are for some future date
+NOTE: I do NOT have an installable package created so the instructions below
+are for some future date.
+
+This is the first JS project I've ever done so I have no idea about JS ecosystem and
+how to construct installers for it. I just manually copied files to the Coc extensions folder
+and it seems to work.
 
 # coc-ltls
 
